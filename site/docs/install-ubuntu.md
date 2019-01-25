@@ -47,26 +47,9 @@ from the [Bazel releases page on GitHub](https://github.com/bazelbuild/bazel/rel
 Run the Bazel installer as follows:
 
 ```bash
-chmod +x bazel-<version>-installer-linux-x86_64.sh
-./bazel-<version>-installer-linux-x86_64.sh --user
+sudo dpkg -i bazel_0.21.0-linux-x86_64.deb 
+sudo apt-get install -f
 ```
-
-The `--user` flag installs Bazel to the `$HOME/bin` directory on your system and
-sets the `.bazelrc` path to `$HOME/.bazelrc`. Use the `--help` command to see
-additional installation options.
-
-### Step 4: Set up your environment
-
-If you ran the Bazel installer with the `--user` flag as above, the Bazel
-executable is installed in your `$HOME/bin` directory. It's a good idea to add
-this directory to your default paths, as follows:
-
-```bash
-export PATH="$PATH:$HOME/bin"
-```
-
-You can also add this command to your `~/.bashrc` file.
-
 <h2 id="install-on-ubuntu"> Using Bazel custom APT repository</h2>
 
 ### Step 1: Install the JDK
